@@ -9,7 +9,7 @@ class TestHelloWorld(unittest.TestCase):
         st = 'Hello dhanu'
         ret_value = helloworld.helloworld(st)
         print 'ret_value = ', ret_value
-        assert(ret_value == False)
+        assert(ret_value == True)
 
 
 if __name__ == '__main__':
