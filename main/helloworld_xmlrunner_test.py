@@ -1,0 +1,19 @@
+#!/usr/bin/env python
+
+import helloworld
+import unittest
+import xmlrunner
+
+class TestHelloWorld(unittest.TestCase):
+    def setUp(self):
+	pass
+
+    def test_helloworld(self):
+        st = 'Hello dhanu'
+        ret_value = helloworld.helloworld(st)
+        print 'ret_value = ', ret_value
+        assert(ret_value == True)
+
+
+if __name__ == '__main__':
+    unittest.main(testRunner=xmlrunner.XMLTestRunner(output='test-reports'))
