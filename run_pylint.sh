@@ -5,7 +5,7 @@ fi
 # source venv/bin/activate
 export PYTHONPATH="$PWD:$PYTHONPATH"
 
-# pip install pylint
+pip install pylint
 
 ## cd repo
 ### Need this because some strange control sequences when using default TERM=xterm
@@ -15,6 +15,7 @@ export TERM="linux"
 ## is 2; because we need search *.py files under main directory.
 pylint --rcfile=pylint.cfg $(find . -maxdepth 2 -name "*.py" -print) main/ > pylint.log || exit 0
 
+pwd
 ## If we have more subfolders, we could just use below statement.
 ## pylint --rcfile=pylint.cfg $(find main/ -name "*.py" -print) main/ > pylint.log || exit 0
 
