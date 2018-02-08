@@ -2,10 +2,10 @@ if [ ! -d venv ] ; then
 
    virtualenv --python=python2.7 venv
 fi
-source venv/bin/activate
+# source venv/bin/activate
 export PYTHONPATH="$PWD:$PYTHONPATH"
 
-pip install pylint
+# pip install pylint
 
 ## cd repo
 ### Need this because some strange control sequences when using default TERM=xterm
